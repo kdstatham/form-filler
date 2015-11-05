@@ -1,0 +1,18 @@
+keyword = 
+Installer Name = 
+Product Name = 
+Product Safe Name = 
+Price = 
+Primary Category = 
+rnum = 
+Release Date = 
+Game Type = 
+
+
+# 'Game Type' should be either online or download
+#
+# 'Release Date' should be in the following format: M/D/YYYY
+# Do not use leading zeros for months or days in the Release Date
+#
+# Example Release Dates: 3/4/2015, 11/5/2016, 1/12/2014, 10/15/2013
+#
