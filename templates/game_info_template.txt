@@ -8,6 +8,17 @@ rnum =
 Release Date = 
 Game Type = 
 
+# Additional info for the 'Copy' tab in Rosebud
+
+Short Synopsis = 
+
+Synopsis = 
+
+Credits = 
+
+Instructions = See in-game help for detailed instructions.<br><br>
+
+System Reqs = Windows XP/Vista/7/8<br>1.0 GHz processor<br>2 GB RAM<br>DirectX 9.0c<br>128 MB video RAM<br>200 MB free disk space<br>
 
 # 'Game Type' should be either online or download
 #
@@ -15,4 +26,4 @@ Game Type =
 # Do not use leading zeros for months or days in the Release Date
 #
 # Example Release Dates: 3/4/2015, 11/5/2016, 1/12/2014, 10/15/2013
-#
+
