@@ -2,8 +2,10 @@ keyword =
 Installer Name = 
 Product Name = 
 Product Safe Name = 
+Short Title = 
 Price = 
 Primary Category = 
+Secondary Category = 
 rnum = 
 Release Date = 
 Game Type = 
@@ -14,11 +16,11 @@ Short Synopsis =
 
 Synopsis = 
 
+System Reqs = Windows XP/Vista/7/8<br>1.0 GHz processor<br>2 GB RAM<br>DirectX 9.0c<br>128 MB video RAM<br>200 MB free disk space<br>
+
 Credits = 
 
 Instructions = See in-game help for detailed instructions.<br><br>
-
-System Reqs = Windows XP/Vista/7/8<br>1.0 GHz processor<br>2 GB RAM<br>DirectX 9.0c<br>128 MB video RAM<br>200 MB free disk space<br>
 
 # 'Game Type' should be either online or download
 #
