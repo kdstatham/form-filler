@@ -36,6 +36,7 @@ class Game:
         self.product_name = 'XXX'
         self.product_safe_name = 'XXX'
         self.primary_category = 'XXX'
+        self.secondary_category = ''
         self.friendly_download_URL = 'XXX'
         self.detailed_download_URL = 'XXX'
         self.large_image_URL = '/i/picons/KEYWORD_small.jpg'
@@ -43,6 +44,16 @@ class Game:
         self.rnum = 'XXX'
         self.release_date = 'XXX'
         self.type = 'XXX'
+        self.short_title = ''
+        self.short_synopsis = ''
+        self.full_synopsis = ''
+        self.min_sys_reqs = ''
+        self.credits = ''
+        self.search_words = ''
+        self.instructions = ''
+        self.seo_title = ''
+        self.meta_description = ''
+        self.meta_keywords = ''
 
     def writeSKinfo(self, output_file):
         # Writes the Shopkeeper info for each game to output_file
@@ -71,7 +82,7 @@ class Game:
             f.write("Synopsis: \n\n")
             if self.type == 'download':
                 f.write("System Reqs: Windows XP/Vista/7/8<br>1.0 GHz processor<br>2 GB RAM" +
-                        "<br>DirectX 9.0c<br>256 MB video RAM<br>186 MB free disk space<br>\n\n")
+                        "<br>DirectX 9.0c<br>256 MB video RAM<br>200 MB free disk space<br>\n\n")
             elif self.type == 'online':
                 f.write("System Reqs: Windows 2000/XP/Vista/7<br>Macintosh OS X<br>" +
                         "800 MHz processor<br>1 GB RAM<br>Flash Player<br>128 MB video RAM<br>\n\n")
@@ -136,8 +147,14 @@ def get_game_info():
                     if line_contents[0] == 'Product Safe Name':
                         game.product_safe_name = line_contents[1]
 
+                    if line_contents[0] == 'Short Title':
+                        game.short_title = line_contents[1]
+
                     if line_contents[0] == 'Primary Category':
                         game.primary_category = line_contents[1]
+
+                    if line_contents[0] == 'Secondary Category':
+                        game.secondary_category = line_contents[1]
 
                     if line_contents[0] == 'rnum':
                         game.rnum = line_contents[1]
@@ -148,7 +165,24 @@ def get_game_info():
                     if line_contents[0] == 'Game Type':
                         game.type = line_contents[1].lower()
 
+                    if line_contents[0] == 'Short Synopsis':
+                        game.short_synopsis = line_contents[1]
+
+                    if line_contents[0] == 'Synopsis':
+                        game.full_synopsis = line_contents[1]
+
+                    if line_contents[0] == 'Credits':
+                        game.credits = line_contents[1]
+
+                    if line_contents[0] == 'Instructions':
+                        game.instructions = line_contents[1]
+
+                    if line_contents[0] == 'System Reqs':
+                        game.min_sys_reqs = line_contents[1]
+
             game.sku = game.keyword + '-pc'
+            game.search_words = '{0}, {1}, {2} games, {2}'.format(game.product_name, game.primary_category.lower(), game.type)
+            game.meta_description = '{0}; {1} Play more {2} games at Shockwave.com'.format(game.product_name, game.short_synopsis, game.primary_category.lower())
 
             # Various string parsing below to get each value exactly as we want it
 
@@ -265,6 +299,16 @@ def create_game_property_sheet(game):
             line = line.replace('DATE1', game.release_date)
             line = line.replace('KEYWORD1', game.keyword)
             line = line.replace('GENRE1', game.primary_category)
+            line = line.replace('GENRE2', game.secondary_category)
+            line = line.replace('FULL_TITLE1', game.product_name)
+            line = line.replace('SHORT_TITLE1', game.short_title)
+            line = line.replace('SHORT_SYNOPSIS1', game.short_synopsis)
+            line = line.replace('FULL_SYNOPSIS1', game.full_synopsis)
+            line = line.replace('MSR1', game.min_sys_reqs)
+            line = line.replace('CREDITS1', game.credits)
+            line = line.replace('INSTRUCTIONS1', game.instructions)
+            line = line.replace('SEARCH_WORDS1', game.search_words)
+            line = line.replace('META_DESCRIPTION1', game.meta_description)
             f.write(line)
 
 
