@@ -360,7 +360,9 @@ if __name__ == '__main__':
         create_df_property_sheet(game)      # create dynamic feature property sheets for all games
         create_game_property_sheet(game)    # create game property sheets for all games
         create_gaf_folder(game)             # create and fill out gaf folder for all download games
-        game.writeSiteCopyTemplate(SITE_COPY_FILE)      # create and partially fill out the site copy template
+
+        # DEPRECATED, we no longer need the SiteCopyTemplate now that we write all info to each game's property sheet
+        # game.writeSiteCopyTemplate(SITE_COPY_FILE)      # create and partially fill out the site copy template
 	
 	# DEPRECATED, THIS WAS USED WITH THE VIACOM UPLOAD PROCESS
     # create_upload_script(game_info, OUTPUT_DIR + "/winscp_upload_script.txt")   # write script and .bat file used to upload DL games to server

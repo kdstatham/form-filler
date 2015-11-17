@@ -17,5 +17,4 @@ STEP-BY-STEP INSTRUCTIONS
 		- A completed properties sheet for each game, used for Rosebud.
 		- A completed properties sheet for each dynamic feature, used for Rosebud.
 		- A 'ShopkeeperInfo.txt' file, used to fill out each download game's game record in Shopkeeper.
-		- A 'SiteCopy.txt' file.  This will be partially filled out for each game, but will require copy changes specific to each game.
 		- Gaf folders for each download game, each with the appropriate folder structure and a completed config file.
