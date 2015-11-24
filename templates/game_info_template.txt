@@ -17,8 +17,8 @@ Short Synopsis =
 Synopsis = 
 
 # Delete the one you don't need - top is for download games, bottom for online games
-System Reqs = Windows XP/Vista/7/8<br>1.0 GHz processor<br>2 GB RAM<br>DirectX 9.0c<br>128 MB video RAM<br>200 MB free disk space<br>
 System Reqs = Windows 2000/XP/Vista/7<br>Macintosh OS X<br>800 MHz processor<br>1 GB RAM<br>Flash Player<br>128 MB video RAM<br>
+System Reqs = Windows XP/Vista/7/8<br>1.0 GHz processor<br>2 GB RAM<br>DirectX 9.0c<br>128 MB video RAM<br>200 MB free disk space<br>
 
 Credits = 
 
