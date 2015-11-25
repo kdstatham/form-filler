@@ -334,11 +334,10 @@ def create_upload_script(game_list, script):
 
     with open(OUTPUT_DIR + "/RunWinSCPscript.bat", 'w') as f:
         f.write("WinSCP.exe /script=" + os.path.basename(script) + " /console")
+
         
-
-
-# Here's where the program executes.  This writes all necessary files for games which have completed templates in the root folder    
-if __name__ == '__main__':
+def main():
+    """Creates all necessary files for games which have (somewhat) completed templates in the root folder"""
 
     # Create output directory if it doesn't already exist
     if not os.path.exists(OUTPUT_DIR):
@@ -366,8 +365,11 @@ if __name__ == '__main__':
 
         # DEPRECATED, we no longer need the SiteCopyTemplate now that we write all info to each game's property sheet
         # game.writeSiteCopyTemplate(SITE_COPY_FILE)      # create and partially fill out the site copy template
-	
-	# DEPRECATED, THIS WAS USED WITH THE VIACOM UPLOAD PROCESS
+    
+    # DEPRECATED, THIS WAS USED WITH THE VIACOM UPLOAD PROCESS
     # create_upload_script(game_info, OUTPUT_DIR + "/winscp_upload_script.txt")   # write script and .bat file used to upload DL games to server
 
-        
+  
+if __name__ == '__main__':
+    main()
+
